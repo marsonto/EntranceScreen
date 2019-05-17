@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = "/v1/")
+@RequestMapping(path = "/v1")
 public class MapController {
 
     private final MapService mapService;
@@ -17,19 +17,18 @@ public class MapController {
         this.mapService = mapService;
     }
 
-    @GetMapping(path = "health")
+    @GetMapping(path = "/health")
     public boolean health() {
         return mapService.isHealthy();
     }
 
-    @GetMapping(path = "prepare")
-    public void prepare(){}
+    @GetMapping(path = "/prepare")
+    public void prepare(){
+        mapService.prepare();
+    }
 
-    @GetMapping(path = "ready")
+    @GetMapping(path = "/ready")
     public boolean ready(){
         return true;
     }
-
-    @GetMapping(path = "")
-    public void map(){}
 }

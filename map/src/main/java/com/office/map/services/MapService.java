@@ -1,6 +1,5 @@
 package com.office.map.services;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -8,11 +7,14 @@ import java.io.File;
 @Service
 public class MapService {
 
-    @Value("$(file.path)")
-    private String path;
+    private String path = "src\\main\\resources\\static\\pictures\\map.png";
 
     public boolean isHealthy(){
         File file = new File(path);
         return file.exists() && !file.isDirectory();
+    }
+
+    public void prepare(){
+
     }
 }
