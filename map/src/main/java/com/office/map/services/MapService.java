@@ -14,21 +14,24 @@ public class MapService {
 
     private String path = "src\\main\\resources\\static\\pictures\\";
 
-    @Value("${office.desk01}")
-    private String colleague;
+    @Value("${office1.desk01}")
+    private String colleague01;
+    @Value("${office1.desk02}")
+    private String colleague02;
 
     public boolean isHealthy(){
-        File file = new File(path + "map.png");
+        final File file = new File(path + "map.png");
         return file.exists() && !file.isDirectory();
     }
 
     public void prepare(){
         try {
-            BufferedImage bufImg = ImageIO.read(new File(path + "map.png"));
-            Graphics2D graphics = (Graphics2D) bufImg.getGraphics();
+            final BufferedImage bufImg = ImageIO.read(new File(path + "map.png"));
+            final Graphics2D graphics = (Graphics2D) bufImg.getGraphics();
 
             graphics.setColor(Color.BLACK);
-            graphics.drawString(colleague,325,500);
+            graphics.drawString(colleague01,325,500);
+            graphics.drawString(colleague02,325,516);
 
             ImageIO.write(bufImg,"png",new File(path + "namesmap.png"));
         } catch (IOException e) {
@@ -37,7 +40,7 @@ public class MapService {
     }
 
     public boolean isReady(){
-        File file = new File(path + "namesmap.png");
+        final File file = new File(path + "namesmap.png");
         return file.exists() && !file.isDirectory();
     }
 }
