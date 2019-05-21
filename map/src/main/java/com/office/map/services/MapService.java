@@ -28,7 +28,7 @@ public class MapService {
             Graphics2D graphics = (Graphics2D) bufImg.getGraphics();
 
             graphics.setColor(Color.BLACK);
-            graphics.drawString(colleague,528,609);
+            graphics.drawString(colleague,325,500);
 
             ImageIO.write(bufImg,"png",new File(path + "namesmap.png"));
         } catch (IOException e) {

@@ -5,7 +5,7 @@
 </head>
 <body>
 	<h2 style="font-size:50px">ARITHNEA - B&uuml;roplan Bremen</h2>
-	<img src="pictures/namesmap.png" height="872" width="1274">
+	<img src="pictures/namesmap.png">
 	<div id="demo"></div>
 </body>
 </html>
