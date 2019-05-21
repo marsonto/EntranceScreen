@@ -29,6 +29,6 @@ public class MapController {
 
     @GetMapping(path = "/ready")
     public boolean ready(){
-        return true;
+        return mapService.isReady();
     }
 }
