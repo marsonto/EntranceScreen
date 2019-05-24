@@ -33,19 +33,20 @@ public class MapService {
             final Graphics2D graphics = (Graphics2D) bufImg.getGraphics();
             final int startingX = 350;
             final int startingY = 510;
-            final int space = 16;
+            final int space = 20;
 
             final Map<Integer,String> seating = officeList.getSeating();
-            graphics.setColor(Color.BLACK);
+            graphics.setColor(Color.decode("#818284"));
+            graphics.setFont(new Font("Open Sans Semi Bold", Font.PLAIN, 12));
 
             final double sizeInDouble = seating.size();
             for (int i = 1; i <= seating.size(); i++){
                 if (i <= Math.ceil(sizeInDouble/3)) {
                     graphics.drawString(i + ". " + seating.get(i), startingX, startingY + i * space);
                 } else if (i <= Math.ceil(sizeInDouble/3*2)){
-                    graphics.drawString(i + ". " + seating.get(i), startingX + 175, startingY + (i - (int) Math.ceil(sizeInDouble/3))*space);
+                    graphics.drawString(i + ". " + seating.get(i), startingX + 190, startingY + (i - (int) Math.ceil(sizeInDouble/3))*space);
                 } else {
-                    graphics.drawString(i + ". " + seating.get(i), startingX + 350, startingY + (i - (int) Math.ceil(sizeInDouble/3*2))*space);
+                    graphics.drawString(i + ". " + seating.get(i), startingX + 380, startingY + (i - (int) Math.ceil(sizeInDouble/3*2))*space);
                 }
             }
 
