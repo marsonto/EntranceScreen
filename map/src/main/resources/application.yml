@@ -4,32 +4,31 @@ spring:
       prefix: '/WEB-INF/jsp/'
       suffix: '.jsp'
 
-office1:
-  desk01: 'Daniel Broitzmann'
-  desk02: 'Torben Süfke'
-  desk03: 'leer'
-  desk04: 'leer'
-
-office2:
-  desk01: 'leer'
-  desk02: 'Selim Ufakacar'
-  desk03: 'leer'
-  desk04: 'Thorben Schiller'
-
-office3:
-  desk01: 'Josephine Moritz'
-  desk02: 'Egor Fabricius'
-  desk03: 'Marius Sontopski'
-  desk04: 'Yvonne Wedemeier'
-  desk05: 'Frantz Tchambo'
-  desk06: 'Ruben Smidt'
-  desk07: 'Karina Knoll'
-  desk08: 'Christian Tiedt'
-  desk09: 'Natali Käfer'
-  desk10: 'Lena Köhler'
-  desk11: 'Lena Rosenboom'
-  desk12: 'Philipp Sahner'
-
-office4:
-  desk01: 'Christian Kohl'
-  desk02: 'Cornelia Hering'
+office:
+  seating:
+    #First Office
+    1: 'Daniel Broitzmann'
+    2: 'Torben Süfke'
+    3: 'frei'
+    4: 'frei'
+    #Second Office
+    5: 'frei'
+    6: 'Selim Ufakacar'
+    7: 'frei'
+    8: 'Thorben Schiller'
+    #Third Office
+    9: 'Josephine Moritz'
+    10: 'Egor Fabricius'
+    11: 'Marius Sontopski'
+    12: 'Yvonne Wedemeier'
+    13: 'Frantz Tchambo'
+    14: 'Ruben Smidt'
+    15: 'Karina Knoll'
+    16: 'Christian Tiedt'
+    17: 'Natali Käfer'
+    18: 'Lena Köhler'
+    19: 'Lena Rosenboom'
+    20: 'Philipp Sahner'
+    #Fourth Office
+    21: 'Christian Kohl'
+    22: 'Cornelia Hering'
